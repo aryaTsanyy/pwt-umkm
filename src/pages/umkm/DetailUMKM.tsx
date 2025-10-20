@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { umkmList } from "@/pages/data/umkmList";
+import { umkmList } from "@/data/umkmList";
 import { Umkm } from "@/pages/api/umkm";
 const DynamicMap = dynamic(() => import("@/components/Map/UMKMMap"), {
   ssr: false,

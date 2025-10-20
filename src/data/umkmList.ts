@@ -2,8 +2,6 @@
 import { Umkm } from "@/pages/api/umkm";
 
 export const umkmList: Umkm[] = [
-  // ... UMKM 1, 2, 3, 4 (Potara Studio)
-
   {
     id: 1,
     slug: "link-coffee-barber",

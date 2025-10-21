@@ -3,15 +3,13 @@
 // Daftar kategori yang digunakan untuk filter. Tambahkan jika ada kategori lain!
 export type Category = "Makanan" | "Minuman" | "Jasa" | "Oleh-oleh" | "Lainnya";
 
-// --- 2. Interface Bersarang (Nested Data) ---
-
 // Struktur untuk setiap item menu/layanan
 export interface ProductService {
   name: string;
   // Jika ingin menambah harga di masa depan: price?: number;
 }
 
-// Struktur untuk ulasan statis
+// Review dari pelanggan (opsional, bisa diaktifkan nanti)
 export interface Review {
   id: number;
   author: string;
@@ -20,7 +18,7 @@ export interface Review {
   date: string;
 }
 
-// Struktur untuk data Lokasi
+// Location Data
 export interface LocationData {
   lat: number;
   lng: number;

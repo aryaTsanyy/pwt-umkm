@@ -68,8 +68,8 @@ export const umkmList: Umkm[] = [
     instagram: "@patawi_coffee",
     operatingHours: "08:00 - 20:00 WIB",
     location: {
-      lat: -7.4315,
-      lng: 109.241,
+      lat: -7.384011900629864,
+      lng: 109.24524079499669,
       googleMapsUrl: "https://goo.gl/maps/contohlinknavigasi2",
     },
     productsAndServices: [
@@ -84,5 +84,4 @@ export const umkmList: Umkm[] = [
       "/images/patawi-coffee-shop.jpg",
     ],
   },
-  // ... UMKM selanjutnya
 ];

@@ -1,7 +1,13 @@
 // --- 1. Tipe Data Dasar & Union ---
 
 // Daftar kategori yang digunakan untuk filter. Tambahkan jika ada kategori lain!
-export type Category = "Makanan" | "Minuman" | "Jasa" | "Oleh-oleh" | "Lainnya";
+export type Category =
+  | "Makanan"
+  | "Minuman"
+  | "Jasa"
+  | "Kosmetik"
+  | "Oleh-oleh"
+  | "Lainnya";
 
 // Struktur untuk setiap item menu/layanan
 export interface ProductService {

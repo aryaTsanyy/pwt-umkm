@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Directory from "@/pages/directory";
+import Navbar from "@/components/layout/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,7 @@ export default function Home() {
     <div
       className={`${geistSans.className} ${geistMono.className} items-center justify-items-center min-h-screen `}
     >
+      <Navbar />
       <Directory />
     </div>
   );

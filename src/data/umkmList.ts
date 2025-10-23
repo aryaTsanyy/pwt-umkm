@@ -1,4 +1,3 @@
-// Pastikan Anda mengimpor interface dari file types/umkm.ts
 import { Umkm } from "@/pages/api/umkm";
 
 export const umkmList: Umkm[] = [
@@ -27,8 +26,8 @@ export const umkmList: Umkm[] = [
     instagram: "@linkcoffee_barber",
     operatingHours: "10:00 - 22:00 WIB",
     location: {
-      lat: -7.4215,
-      lng: 109.231,
+      lat: -7.424695165145097,
+      lng: 109.23711205147599,
       googleMapsUrl: "https://goo.gl/maps/contohlinknavigasi",
     },
     productsAndServices: [
@@ -53,9 +52,9 @@ export const umkmList: Umkm[] = [
     tagline: "Rasakan Sensasi Kopi Asli dari Perkebunan Lokal.",
     categories: ["Minuman"],
     description:
-      "Nikmati kopi berkualitas tinggi yang diproduksi secara lokal dengan cita rasa yang kaya dan aroma yang menggugah selera. Patawi Coffee berkomitmen untuk mendukung petani kopi lokal dan menyajikan secangkir kopi yang tidak hanya enak, tetapi juga berkelanjutan.",
+      "Nikmati kopi berkualitas tinggi yang diproduksi secara lokal dengan cita rasa yang kaya dan aroma yang menggugah selera.",
     story:
-      "Didirikan oleh sekelompok pecinta kopi, Patawi Coffee bertujuan untuk memperkenalkan kopi lokal ke panggung yang lebih luas. Dengan fokus pada kualitas dan keberlanjutan, kami bekerja langsung dengan petani untuk memastikan setiap biji kopi diperlakukan dengan baik dari perkebunan hingga cangkir Anda.",
+      "Didirikan oleh sekelompok pecinta kopi, Patawi Coffee bertujuan memperkenalkan kopi lokal ke panggung yang lebih luas.",
     searchKeywords: [
       "Beans Export",
       "Kopi Lokal",
@@ -68,8 +67,8 @@ export const umkmList: Umkm[] = [
     instagram: "@patawi_coffee",
     operatingHours: "08:00 - 20:00 WIB",
     location: {
-      lat: -7.384011900629864,
-      lng: 109.24524079499669,
+      lat: -7.38156916150393,
+      lng: 109.26091358280509,
       googleMapsUrl: "https://goo.gl/maps/contohlinknavigasi2",
     },
     productsAndServices: [
@@ -82,6 +81,313 @@ export const umkmList: Umkm[] = [
       "/images/patawi-coffee-cover.jpg",
       "/images/patawi-coffee-beans.jpg",
       "/images/patawi-coffee-shop.jpg",
+    ],
+  },
+  {
+    id: 3,
+    slug: "utomo-house",
+    name: "Utomo House Coffee Roastery",
+    tagline: "Filter Coffee Enthusiast & Homey Roastery di Purwokerto",
+    categories: ["Minuman", "Jasa"],
+    description:
+      "Kedai kopi dengan roastery dan suasana homy, cocok untuk ngopi santai atau bekerja.",
+    story:
+      "Utomo House hadir di Tambaksogra sebagai roastery rumahan dengan komunitas kopi aktif.",
+    searchKeywords: [
+      "roastery",
+      "filter coffee",
+      "kopi spesialti Banyumas",
+      "co-working coffee Purwokerto",
+    ],
+    averageRating: 4.6,
+    address: "Jl. Raya Kebanggan, Tambaksogra, Sumbang, Banyumas, Jawa Tengah",
+    phone: "",
+    instagram: "@utomo_house",
+    operatingHours: "09:00 - 23:00 WIB",
+    location: {
+      lat: -7.38156916150393,
+      lng: 109.26091358280509,
+      googleMapsUrl: "https://goo.gl/maps/contohutomo",
+    },
+    productsAndServices: [
+      { name: "Filter Coffee Single Origin" },
+      { name: "Espresso Based Drink" },
+      { name: "Kopi Robusta Lokal Roasted" },
+      { name: "Manual Brew V60 / Aeropress" },
+      { name: "Light Snack & Dessert" },
+    ],
+    photos: [
+      "/images/utomo-house-cover.jpg",
+      "/images/utomo-house-interior.jpg",
+      "/images/utomo-house-kopi.jpg",
+    ],
+  },
+  {
+    id: 4,
+    slug: "et-al-coffee",
+    name: "Et Al Coffee Purwokerto",
+    tagline: "Kafe Kekinian dengan Photobox & Area WFH Friendly",
+    categories: ["Minuman"],
+    description:
+      "Kafe modern dengan desain minimalis, area photobox, dan spot kerja nyaman.",
+    story:
+      "Cabang dari Et Al Coffee hadir di Purwokerto dengan konsep experience lengkap — tempat foto, nongkrong, dan kerja.",
+    searchKeywords: [
+      "kafe instagramable Purwokerto",
+      "photobox kafe Purwokerto",
+      "et al coffee Arya Purwokerto",
+    ],
+    averageRating: 4.5,
+    address:
+      "Jl. DI Panjaitan No.23, Karangreja, Purwokerto Kidul, Kab. Banyumas, Jawa Tengah",
+    phone: "",
+    instagram: "@etalcoffee.purwokerto",
+    operatingHours: "10:00 - 22:00 WIB",
+    location: {
+      lat: -7.433135819092331,
+      lng: 109.24858933613257,
+      googleMapsUrl: "https://goo.gl/maps/contohetal",
+    },
+    productsAndServices: [
+      { name: "Et Al Signature Coffee" },
+      { name: "Klepon Latte" },
+      { name: "Tape Mocktail" },
+      { name: "Spaghetti Bolognese" },
+      { name: "Chicken Crispy Sambal Matah" },
+    ],
+    photos: [
+      "/images/et-al-coffee-cover.jpg",
+      "/images/et-al-coffee-photobox.jpg",
+      "/images/et-al-coffee-interior.jpg",
+    ],
+  },
+  {
+    id: 5,
+    slug: "potara-studio",
+    name: "Potara Studio",
+    tagline: "Creative Studio Purwokerto: Design, Designer & UI/UX",
+    categories: ["Jasa"],
+    description:
+      "Studio kreatif berbasis di Purwokerto yang menawarkan desain, UI/UX, ilustrasi, dan web development.",
+    story:
+      "Potara Studio lahir dengan misi membantu bisnis lokal tampil lebih profesional lewat desain kreatif.",
+    searchKeywords: [
+      "studio desain Purwokerto",
+      "Designer agency Banyumas",
+      "UI UX Purwokerto",
+    ],
+    averageRating: 4.4,
+    address: "Purwokerto, Jawa Tengah",
+    phone: "",
+    instagram: "@potarastudio",
+    operatingHours: "09:00 - 18:00 WIB",
+    location: {
+      lat: -7.406515602820817,
+      lng: 109.25980856681922,
+      googleMapsUrl: "https://goo.gl/maps/contohpotara",
+    },
+    productsAndServices: [
+      { name: "Brand Identity Design" },
+      { name: "UI/UX Website & Mobile App" },
+      { name: "2D Illustration & Animation" },
+      { name: "Print & Digital Media Design" },
+    ],
+    photos: [
+      "/images/potara-studio-workspace.jpg",
+      "/images/potara-studio-branding-project.jpg",
+      "/images/potara-studio-team.jpg",
+    ],
+  },
+  {
+    id: 6,
+    slug: "nasi-goreng-mas-jupri-tambak-batu",
+    name: "Nasi Goreng Mas Jupri Tambak Batu",
+    tagline: "Nasi Goreng Legendaris Tambak Batu, Gurihnya Bikin Nagih!",
+    categories: ["Makanan"],
+    description:
+      "Nasi goreng khas Purwokerto yang disajikan dengan cita rasa smokey dan porsi melimpah.",
+    story:
+      "Mas Jupri membawa resep turun-temurun yang membuat nasi gorengnya jadi favorit warga Tambak Batu.",
+    searchKeywords: [
+      "nasi goreng tambak batu",
+      "kuliner malam purwokerto",
+      "mas jupri",
+      "nasi goreng enak",
+    ],
+    averageRating: 4.8,
+    address: "Tambak Batu, Purwokerto Selatan",
+    phone: "085612345678",
+    instagram: "@nasigorengmasjupri",
+    operatingHours: "17:00 - 00:00 WIB",
+    location: {
+      lat: -7.445868936797285,
+      lng: 109.230776088359,
+      googleMapsUrl: "https://goo.gl/maps/nasigorengmasjupri",
+    },
+    productsAndServices: [
+      { name: "Nasi Goreng Spesial" },
+      { name: "Nasi Goreng Seafood" },
+      { name: "Nasi Goreng Ayam" },
+      { name: "Mie Goreng Jawa" },
+      { name: "Telur Dadar Jumbo" },
+    ],
+    photos: [
+      "/images/nasi-goreng-jupri-cover.jpg",
+      "/images/nasi-goreng-jupri-menu.jpg",
+      "/images/nasi-goreng-jupri-gerobak.jpg",
+    ],
+  },
+  {
+    id: 7,
+    slug: "stopper-perfume-centre",
+    name: "Stopper Perfume Centre Purwokerto",
+    tagline: "Pusat Parfum Isi Ulang & Refill Terlengkap di Purwokerto",
+    categories: ["Kosmetik"],
+    description:
+      "Toko parfum isi ulang dengan berbagai varian aroma lokal dan internasional.",
+    story:
+      "Stopper Perfume Centre menjadi supplier parfum lokal dan ritel ternama di Purwokerto.",
+    searchKeywords: [
+      "parfum purwokerto",
+      "refill parfum",
+      "stopper perfume",
+      "toko parfum murah",
+    ],
+    averageRating: 4.7,
+    address:
+      "Jl. HR Bunyamin No. 102, Grendeng, Purwokerto Utara, Kab. Banyumas, Jawa Tengah",
+    phone: "082121234567",
+    instagram: "@stopperperfume",
+    operatingHours: "09:00 - 21:00 WIB",
+    location: {
+      lat: -7.421133915907925,
+      lng: 109.23642286186836,
+      googleMapsUrl: "https://goo.gl/maps/stopperperfume",
+    },
+    productsAndServices: [
+      { name: "Refill Parfum Eropa" },
+      { name: "Parfum Arabian" },
+      { name: "Botol Parfum Unik" },
+      { name: "Custom Aroma" },
+      { name: "Paket Bisnis Parfum" },
+    ],
+    photos: [
+      "/images/stopper-perfume-centre-front.jpg",
+      "/images/stopper-perfume-centre-interior.jpg",
+      "/images/stopper-perfume-centre-products.jpg",
+    ],
+  },
+  {
+    id: 8,
+    slug: "batik-rarascraft-banyumas",
+    name: "RarasCraft Batik Banyumas",
+    tagline: "Eksplorasi Batik Banyumasan Bernilai Seni Tinggi",
+    categories: ["Oleh-oleh"],
+    description:
+      "RarasCraft menghadirkan batik tulis dan cap khas Banyumasan dengan motif tradisional dan modern, diproduksi oleh pengrajin lokal.",
+    story:
+      "Berdiri sejak 2015 di Sokaraja, RarasCraft menjadi pelopor batik kontemporer Banyumas dengan desain yang tetap mempertahankan kearifan lokal.",
+    searchKeywords: [
+      "batik banyumas",
+      "kerajinan sokaraja",
+      "batik tulis purwokerto",
+      "souvenir khas banyumas",
+    ],
+    averageRating: 4.6,
+    address: "Jl. Raya Sokaraja No.10, Sokaraja, Banyumas",
+    phone: "085712341234",
+    instagram: "@rarascraft_batik",
+    operatingHours: "08:00 - 17:00 WIB",
+    location: {
+      lat: -7.454711,
+      lng: 109.288094,
+      googleMapsUrl: "https://goo.gl/maps/rarascraft",
+    },
+    productsAndServices: [
+      { name: "Batik Tulis Khas Banyumas" },
+      { name: "Batik Cap Modern" },
+      { name: "Souvenir & Kain Kustom" },
+    ],
+    photos: [
+      "/images/rarascraft-cover.jpg",
+      "/images/rarascraft-gallery.jpg",
+      "/images/rarascraft-batik.jpg",
+    ],
+  },
+  {
+    id: 9,
+    slug: "mie-nyemek-mbak-yati",
+    name: "Mie Nyemek Mbak Yati",
+    tagline: "Rasa Ndeso yang Melegenda di Purwokerto",
+    categories: ["Makanan"],
+    description:
+      "Kuliner malam legendaris khas Purwokerto yang terkenal dengan rasa pedas gurih dan aroma khas bawang goreng.",
+    story:
+      "Berawal dari gerobak sederhana di tahun 1998, Mie Nyemek Mbak Yati kini jadi ikon kuliner malam Purwokerto.",
+    searchKeywords: [
+      "mie nyemek purwokerto",
+      "kuliner malam banyumas",
+      "mie pedas ndeso",
+    ],
+    averageRating: 4.9,
+    address: "Jl. Overste Isdiman No.12, Purwokerto Timur",
+    phone: "082321112222",
+    instagram: "@mienyemekmbakyati",
+    operatingHours: "17:30 - 00:00 WIB",
+    location: {
+      lat: -7.424842,
+      lng: 109.246718,
+      googleMapsUrl: "https://goo.gl/maps/mienyemek",
+    },
+    productsAndServices: [
+      { name: "Mie Nyemek Pedas" },
+      { name: "Mie Kuah Jawa" },
+      { name: "Mie Goreng Telur" },
+    ],
+    photos: [
+      "/images/mie-nyemek-cover.jpg",
+      "/images/mie-nyemek-process.jpg",
+      "/images/mie-nyemek-plate.jpg",
+    ],
+  },
+  {
+    id: 10,
+    slug: "suluk-kopi-dan-pecel",
+    name: "Suluk Kopi & Pecel",
+    tagline: "Ngopi, Nglontong, Ngrasuk Rasa Banyumasan.",
+    categories: ["Makanan", "Minuman"],
+    description:
+      "Suluk Kopi & Pecel menghadirkan perpaduan unik antara cita rasa kopi lokal Banyumas dan pecel tradisional dengan sambal kacang khas. Tempatnya nyaman bergaya pendopo modern, cocok untuk sarapan, nongkrong, hingga WFC.",
+    story:
+      "Berdiri di jantung kota Purwokerto, Suluk Kopi & Pecel lahir dari filosofi 'ngopi ora mung ngopi' — mengajak pengunjung menikmati kopi dan makanan lokal dengan makna budaya dan kehangatan Banyumasan.",
+    searchKeywords: [
+      "kopi pecel purwokerto",
+      "kuliner khas banyumas",
+      "sarapan tradisional purwokerto",
+      "kafe pendopo modern",
+    ],
+    averageRating: 4.8,
+    address: "Jl. Prof. Dr. HR Boenyamin No.132, Purwokerto Utara",
+    phone: "085789654321",
+    instagram: "@suluk.kopipecel",
+    operatingHours: "07:00 - 22:00 WIB",
+    location: {
+      lat: -7.419515,
+      lng: 109.236843,
+      googleMapsUrl: "https://goo.gl/maps/sulukkopipecel",
+    },
+    productsAndServices: [
+      { name: "Kopi Tubruk Banyumasan" },
+      { name: "Es Kopi Gula Aren" },
+      { name: "Pecel Sambel Kacang Khas" },
+      { name: "Lontong Pecel Telur Ceplok" },
+      { name: "Tempe Mendoan Hangat" },
+      { name: "Wedang Uwuh Tradisional" },
+    ],
+    photos: [
+      "/images/suluk-kopipecel-cover.jpg",
+      "/images/suluk-kopipecel-interior.jpg",
+      "/images/suluk-kopipecel-menu.jpg",
     ],
   },
 ];

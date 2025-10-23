@@ -1,7 +1,7 @@
 // --- 1. Tipe Data Dasar & Union ---
 
 // Daftar kategori yang digunakan untuk filter. Tambahkan jika ada kategori lain!
-export type Category = "Makanan" | "Minuman" | "Jasa" | "Oleh-oleh" | "Lainnya";
+export type Category = "Makanan" | "Minuman" | "Jasa" | "Oleh-oleh" | "Kosmetik" | "Lainnya";
 
 // --- 2. Interface Bersarang (Nested Data) ---
 

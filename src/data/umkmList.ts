@@ -392,24 +392,24 @@ export const umkmList: Umkm[] = [
   },
   {
     id: 11,
-    slug: "es-teler-creamy-cakwe",
-    name: "Es Teler Creamy Cakwe",
+    slug: "es-teler-creamy-cak-w",
+    name: "Es Teler Creamy Cak W",
     tagline: "Segar, Manis, dan Nikmat di Setiap Suapan",
     categories: ["Minuman"],
     description:
-      "Es Teler Creamy Cakwe menghadirkan perpaduan unik antara es teler segar dengan sentuhan creamy dan tambahan cakwe renyah yang menggugah selera. Cocok dinikmati saat cuaca panas atau sebagai pencuci mulut.",
+      "Es Teler Creamy Cak W menghadirkan perpaduan unik antara es teler segar dengan sentuhan creamy dan tambahan cakwe renyah yang menggugah selera. Cocok dinikmati saat cuaca panas atau sebagai pencuci mulut.",
     story:
       "Berawal dari ide sederhana untuk menghadirkan inovasi pada es teler tradisional, Es Teler Creamy Cakwe kini menjadi salah satu pilihan favorit warga Purwokerto. Dengan bahan segar pilihan dan rasa khas yang tidak ditemukan di tempat lain, usaha ini terus berkembang berkat dukungan pelanggan setia.",
     searchKeywords: [
       "es teler Purwokerto",
       "minuman segar Banyumas",
       "dessert enak Purwokerto",
-      "es teler creamy cakwe",
+      "es teler creamy cak w",
     ],
     averageRating: 4.7,
     address: "Jl. Prof. Dr. Suharso No.45, Purwokerto, Jawa Tengah",
     phone: "0812-3456-7890",
-    instagram: "@estelercreamycakwe",
+    instagram: "@estelercreamycakw",
     operatingHours: "10:00 - 21:00 WIB",
     location: {
       lat: -7.426218,
@@ -418,14 +418,13 @@ export const umkmList: Umkm[] = [
     },
     productsAndServices: [
       { name: "Es Teler Creamy Original" },
-      { name: "Es Teler Cakwe Spesial" },
+      { name: "Es Teler Cak W Spesial" },
       { name: "Es Teler Alpukat Kocok" },
-      { name: "Cakwe Hangat Saus Kacang" },
     ],
     photos: [
-      "/images/es-teler-creamycakwe-1.jpg",
-      "/images/es-teler-creamycakwe-2.jpg",
-      "/images/es-teler-creamycakwe-3.jpg",
+      "/images/es-teler-creamycakw-1.jpg",
+      "/images/es-teler-creamycakw-2.jpg",
+      "/images/es-teler-creamycakw-3.jpg",
     ],
   },
 ];

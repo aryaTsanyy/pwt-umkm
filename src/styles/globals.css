@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fefffb;
+  --green: #b5ea33;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --blue-primmary: #13569c;
+  --dark-text: #081f36;
+  --darkblue-text: #19395f;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
 }
+.font-anton {
+  font-family: var(--font-anton), sans-serif;
+}
+.font-geist-mono {
+  font-family: var(--font-geist-mono), monospace;
+}
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.primary-button {
+  background: var(--blue-primmary);
+  padding: 14px 32px;
+}
+.dark-text {
+  color: var(--dark-text);
+}
+.darkblue-text {
+  color: var(--darkblue-text);
+}
+
+button,
+input,
+textarea {
+  appearance: none;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar input:-webkit-autofill,
+.search-bar input:-webkit-autofill:hover,
+.search-bar input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--blue-primmary) inset;
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Stats */

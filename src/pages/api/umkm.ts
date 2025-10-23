@@ -1,9 +1,13 @@
 // --- 1. Tipe Data Dasar & Union ---
 
 // Daftar kategori yang digunakan untuk filter. Tambahkan jika ada kategori lain!
-export type Category = "Makanan" | "Minuman" | "Jasa" | "Oleh-oleh" | "Kosmetik" | "Lainnya";
-
-// --- 2. Interface Bersarang (Nested Data) ---
+export type Category =
+  | "Makanan"
+  | "Minuman"
+  | "Jasa"
+  | "Kosmetik"
+  | "Oleh-oleh"
+  | "Lainnya";
 
 // Struktur untuk setiap item menu/layanan
 export interface ProductService {
@@ -11,7 +15,7 @@ export interface ProductService {
   // Jika ingin menambah harga di masa depan: price?: number;
 }
 
-// Struktur untuk ulasan statis
+// Review dari pelanggan (opsional, bisa diaktifkan nanti)
 export interface Review {
   id: number;
   author: string;
@@ -20,7 +24,7 @@ export interface Review {
   date: string;
 }
 
-// Struktur untuk data Lokasi
+// Location Data
 export interface LocationData {
   lat: number;
   lng: number;

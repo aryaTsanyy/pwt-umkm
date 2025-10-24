@@ -77,7 +77,7 @@ const StatItem: React.FC<StatItemProps> = ({
 
   return (
     <div ref={itemRef} className="flex flex-col items-start opacity-0">
-      <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
         <span ref={numberRef}>{number.toLocaleString("id-ID")}</span>
         <span className="text-white">{suffix}</span>
       </div>
@@ -96,7 +96,7 @@ const StatsSection: React.FC = () => {
       description: "Pelaku usaha lokal yang bergabung di platform kami",
     },
     {
-      number: 10000,
+      number: 1000,
       suffix: "+",
       description: "Pengguna yang menjelajahi UMKM tiap bulan.",
     },
@@ -121,8 +121,8 @@ const StatsSection: React.FC = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 relative">
           {stats.map((stat, index) => (
             <React.Fragment key={index}>
               <StatItem
@@ -131,23 +131,17 @@ const StatsSection: React.FC = () => {
                 description={stat.description}
                 delay={index * 0.15}
               />
+              {/* Garis pembatas - hanya di antara item, bukan setelah item terakhir */}
               {index < stats.length - 1 && (
-                <div
-                  className="hidden lg:block absolute border-l-2 border-dashed border-blue-400 opacity-30 h-32 top-8"
-                  style={{ left: `${(index + 1) * 25}%` }}
-                ></div>
+                <div className="hidden lg:block absolute top-0 bottom-0 border-l border-dashed border-white/20" 
+                     style={{ 
+                       left: `${((index + 1) / stats.length) * 100}%`,
+                       transform: 'translateX(-0.5px)'
+                     }}>
+                </div>
               )}
             </React.Fragment>
           ))}
-        </div>
-      </div>
-
-      {/* Vertical dividers for desktop */}
-      <div className="hidden lg:block absolute inset-0 max-w-7xl mx-auto">
-        <div className="relative h-full flex justify-around px-6">
-          <div className="border-l-2 border-dashed border-blue-400 opacity-20"></div>
-          <div className="border-l-2 border-dashed border-blue-400 opacity-20"></div>
-          <div className="border-l-2 border-dashed border-blue-400 opacity-20"></div>
         </div>
       </div>
     </section>

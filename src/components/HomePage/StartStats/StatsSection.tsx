@@ -77,11 +77,11 @@ const StatItem: React.FC<StatItemProps> = ({
 
   return (
     <div ref={itemRef} className="flex flex-col items-start opacity-0">
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+      <div className="text-3xl font-anton md:text-3xl lg:text-4xl font-normal tracking-[-2%] text-white mb-4">
         <span ref={numberRef}>{number.toLocaleString("id-ID")}</span>
         <span className="text-white">{suffix}</span>
       </div>
-      <p className="text-blue-100 text-base md:text-lg leading-relaxed max-w-xs">
+      <p className="text-white font-inter text-base md:text-lg tracking-[-2%] leading-relaxed max-w-10/12">
         {description}
       </p>
     </div>
@@ -114,15 +114,15 @@ const StatsSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-gradient-to-br bg-[#13569C] py-20 md:py-32 overflow-hidden">
+    <section className="relative flex items-center w-full bg-gradient-to-br bg-[#13569C] py-20 md:py-32 lg:py-36 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 relative">
+      <div className="w-full relative z-10 flex justify-between items-center mx-24 px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-12">
           {stats.map((stat, index) => (
             <React.Fragment key={index}>
               <StatItem
@@ -133,12 +133,10 @@ const StatsSection: React.FC = () => {
               />
               {/* Garis pembatas - hanya di antara item, bukan setelah item terakhir */}
               {index < stats.length - 1 && (
-                <div className="hidden lg:block absolute top-0 bottom-0 border-l border-dashed border-white/20" 
-                     style={{ 
-                       left: `${((index + 1) / stats.length) * 100}%`,
-                       transform: 'translateX(-0.5px)'
-                     }}>
-                </div>
+                <div
+                  className="hidden lg:block absolute border-l-2 border-dashed border-blue-400 opacity-30 h-32 top-0"
+                  style={{ left: `${(index + 1) * 25}%` }}
+                ></div>
               )}
             </React.Fragment>
           ))}

@@ -118,7 +118,7 @@ const CategorySection = () => {
   }, []);
 
   return (
-    <div className="h-full w-full py-28">
+    <div className="h-full w-full flex px-20 py-28">
       <style>{`
         @keyframes fadeInUp {
           from {
@@ -141,7 +141,7 @@ const CategorySection = () => {
 
       <div className="w-full h-full">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-12 gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12 gap-6">
           <div className="flex-1">
             <p className="text-sm darkblue-text mb-10 tracking-wider">
               [ KATEGORI ]

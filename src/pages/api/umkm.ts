@@ -1,5 +1,3 @@
-// --- 1. Tipe Data Dasar & Union ---
-
 // Daftar kategori yang digunakan untuk filter. Tambahkan jika ada kategori lain!
 export type Category =
   | "Makanan"
@@ -51,4 +49,12 @@ export interface Umkm {
   productsAndServices: ProductService[];
   location: LocationData;
   photos: string[];
+}
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  business: string;
+  image: string;
+  feedback: string;
 }

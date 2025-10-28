@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-transparent w-full fixed top-0 left-0 z-50 font-geist-mono">
+    <nav className="bg-transparent w-full fixed top-0 left-0 z-100 font-geist-mono">
       <div className="mx-auto py-5 px-10 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -52,28 +52,36 @@ const Navbar = () => {
           <div className="relative">
             {/* Background Container - Always visible */}
             <div className="bg-white rounded-full shadow-lg px-2 py-2 flex items-center gap-2">
-              {/* Search Bar - Slides from right */}
+              {/* Search Bar - Slides from right with smooth animation */}
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  isSearchOpen ? "opacity-100 max-w-md" : "opacity-0 max-w-0"
+                className={`transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden ${
+                  isSearchOpen
+                    ? "opacity-100 max-w-md translate-x-0"
+                    : "opacity-0 max-w-0 translate-x-4"
                 }`}
               >
-                <div className="flex items-center gap-4 px-4">
+                <div
+                  className={`flex items-center gap-4 px-4 transition-all duration-500 delay-100 ${
+                    isSearchOpen
+                      ? "opacity-100 translate-y-0 animate-slide-in-right"
+                      : "opacity-0 translate-y-2"
+                  }`}
+                >
                   <button
                     type="button"
-                    className="text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap text-sm"
+                    className="text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap text-sm transition-colors duration-200 hover:scale-105 transform"
                   >
                     BERANDA
                   </button>
                   <button
                     type="button"
-                    className="text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap text-sm"
+                    className="text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap text-sm transition-colors duration-200 hover:scale-105 transform"
                   >
                     UMKM
                   </button>
                   <button
                     type="button"
-                    className="text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap text-sm"
+                    className="text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap text-sm transition-colors duration-200 hover:scale-105 transform"
                   >
                     PETA
                   </button>
@@ -83,11 +91,11 @@ const Navbar = () => {
               {/* Menu Button */}
               <button
                 onClick={handleSearchToggle}
-                className="p-3 hover:bg-gray-50 rounded-lg transition-colors flex-shrink-0"
+                className="p-3 hover:bg-gray-50 rounded-lg transition-all duration-300 flex-shrink-0 hover:scale-105 active:scale-95"
               >
                 <div
-                  className={`transition-transform duration-300 ${
-                    isSearchOpen ? "rotate-90" : "rotate-0"
+                  className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                    isSearchOpen ? "rotate-90 scale-110" : "rotate-0 scale-100"
                   }`}
                 >
                   {isSearchOpen ? (
@@ -124,9 +132,11 @@ const Navbar = () => {
 
               <div
                 onClick={handleSearchToggle}
-                className={`primary-button rounded-full w-auto transition-all duration-500 ease-in-out flex-shrink-0 hidden sm:flex items-center ${
-                  isSearchOpen ? "px-8 py-3.5" : "px-8 py-3.5"
-                } px-4 py-3 appearance-none focus:outline-none`}
+                className={`primary-button rounded-full w-auto transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] hidden sm:flex items-center ${
+                  isSearchOpen
+                    ? "px-4 py-3.5 scale-105 w-80"
+                    : "px-8 py-3.5 scale-100 w-auto"
+                } px-4 py-3 appearance-none focus:outline-none hover:scale-105 active:scale-95`}
               >
                 {isSearchOpen ? (
                   <form
@@ -139,6 +149,7 @@ const Navbar = () => {
                       height="18"
                       viewBox="0 0 18 18"
                       fill="none"
+                      className="transition-all duration-500 delay-200 animate-pulse-smooth"
                     >
                       <path
                         d="M16.3469 15.1531L13.0078 11.8125C14.009 10.5079 14.4764 8.87121 14.3153 7.23458C14.1541 5.59795 13.3765 4.08389 12.14 2.99955C10.9036 1.9152 9.30104 1.34177 7.65738 1.39556C6.01372 1.44935 4.45205 2.12635 3.28919 3.28922C2.12632 4.45209 1.44932 6.01375 1.39553 7.65741C1.34174 9.30107 1.91517 10.9037 2.99952 12.1401C4.08386 13.3765 5.59792 14.1541 7.23455 14.3153C8.87118 14.4764 10.5078 14.009 11.8125 13.0078L15.1544 16.3505C15.2329 16.429 15.3261 16.4912 15.4287 16.5337C15.5312 16.5762 15.6411 16.5981 15.7521 16.5981C15.8631 16.5981 15.973 16.5762 16.0756 16.5337C16.1781 16.4912 16.2713 16.429 16.3498 16.3505C16.4282 16.272 16.4905 16.1788 16.533 16.0763C16.5755 15.9737 16.5973 15.8638 16.5973 15.7528C16.5973 15.6418 16.5755 15.5319 16.533 15.4294C16.4905 15.3268 16.4282 15.2337 16.3498 15.1552L16.3469 15.1531ZM3.09375 7.87503C3.09375 6.92938 3.37416 6.00498 3.89953 5.21871C4.4249 4.43243 5.17163 3.81961 6.04529 3.45773C6.91895 3.09585 7.8803 3.00116 8.80777 3.18565C9.73524 3.37013 10.5872 3.8255 11.2558 4.49417C11.9245 5.16284 12.3799 6.01478 12.5644 6.94225C12.7489 7.86972 12.6542 8.83107 12.2923 9.70473C11.9304 10.5784 11.3176 11.3251 10.5313 11.8505C9.74504 12.3759 8.82064 12.6563 7.875 12.6563C6.60733 12.655 5.39196 12.1508 4.49558 11.2544C3.5992 10.3581 3.09505 9.14269 3.09375 7.87503Z"
@@ -150,15 +161,17 @@ const Navbar = () => {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Cari UMKM...."
-                      className="bg-transparent text-white placeholder-white/70 focus:outline-none w-full"
+                      className="bg-transparent text-white placeholder-white/70 focus:outline-none w-full transition-all duration-500 delay-300 animate-fade-in"
                       autoFocus
                     />
                   </form>
                 ) : (
                   <div className="flex">
                     <span
-                      className={`font-bold text-white tracking-wide transition-opacity duration-300 ease-in-out ${
-                        isSearchOpen ? "opacity-100" : "opacity-100"
+                      className={`font-bold text-white tracking-wide transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                        isSearchOpen
+                          ? "opacity-0 scale-95"
+                          : "opacity-100 scale-100"
                       }`}
                     >
                       SEARCH

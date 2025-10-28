@@ -160,8 +160,9 @@ const UMKMMap: React.FC<UMKMMapProps> = ({ data, center }) => {
 
         {/* Styling Peta (TileLayer): Gunakan style yang lebih modern/bersih */}
         <TileLayer
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          className="map-tiles"
         />
         {filteredMarkers.map((item) => {
           const primaryCategory = item.categories[0] || "Lainnya";

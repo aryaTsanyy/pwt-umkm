@@ -159,3 +159,20 @@ textarea {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Map Tile Layer Styling */
+.map-tiles {
+  filter: brightness(0.98) contrast(1.05) saturate(1.1);
+  /* Uncomment untuk efek lain:
+  filter: grayscale(0.1) brightness(0.95);
+  filter: sepia(0.1) saturate(1.2);
+  filter: hue-rotate(10deg) saturate(1.1);
+  */
+}
+
+/* Dark mode map (opsional) */
+@media (prefers-color-scheme: dark) {
+  .map-tiles {
+    filter: brightness(0.8) contrast(1.1) saturate(0.9);
+  }
+}

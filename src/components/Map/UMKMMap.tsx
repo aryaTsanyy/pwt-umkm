@@ -10,17 +10,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { createCategoryIcon } from "@/pages/api/mapIcon";
 
-interface IconDefault extends L.Icon.Default {
-  _getIconUrl?: string;
-}
-// Fix untuk Marker Icon
-delete (L.Icon.Default.prototype as IconDefault)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "leaflet/images/marker-icon-2x.png",
-  iconUrl: "leaflet/images/marker-icon.png",
-  shadowUrl: "leaflet/images/marker-shadow.png",
-});
-
 // Definisikan tipe props yang diterima
 interface MapDataItem {
   lat: number;
@@ -160,7 +149,7 @@ const UMKMMap: React.FC<UMKMMapProps> = ({ data, center }) => {
 
         {/* Styling Peta (TileLayer): Gunakan style yang lebih modern/bersih */}
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
+          url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           className="map-tiles"
         />

@@ -76,7 +76,7 @@ const TypographySection = () => {
 
         <h1
           ref={titleRef}
-          className="text-2xl md:text-4xl lg:text-5xl font-anton text-[#161D04] font-normal mx-auto leading-tight mb-28"
+          className="text-2xl md:text-4xl lg:text-5xl font-anton text-[#081F36] font-normal mx-auto leading-tight mb-28"
         >
           KAMI HADIR UNTUK MENGHUBUNGKAN KAMU DENGAN PELAKU UMKM LOKAL AGAR
           BERSAMA-SAMA TUMBUH DAN MENGGERAKKAN EKONOMI KREATIF INDONESIA.

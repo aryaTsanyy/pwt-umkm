@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div className="w-full h-full px-24">
       <div className="top-section mt-14 flex flex-col items-center gap-8 ">
-        <div className="top-content flex flex-col mx-auto items-center gap-4.5">
+        <div className="top-content flex flex-col mx-32 items-center gap-4.5">
           <h2 className="uppercase text-[#081F36] font-anton font-normal tracking-[-2%] text-center text-[52px]/[120%]">
             Temukan & Dukung UMKM Lokal di Sekitarmu Jelajahi berbagai usaha
             kecil yang tumbuh di daerahmu
@@ -25,8 +25,8 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className="bot-section w-full">
-        <div style={{ width: "90vw", height: "80vh" }}>
+      <div className="bot-section mx-auto mt-4 w-full">
+        <div style={{ width: "100%", height: "80vh" }}>
           <DomeGallery />
         </div>
       </div>

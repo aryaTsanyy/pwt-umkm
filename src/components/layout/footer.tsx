@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#19395F] text-white">
+    <footer className="bg-[#13569C] text-white">
       <div className="w-full h-full mx-auto flex flex-col items-stretch">
         <div className="grid lg:grid-cols-4 items-start">
           {/* Left Section - Newsletter */}
@@ -100,7 +100,7 @@ const Footer: React.FC<FooterProps> = ({
                 />
                 <button
                   onClick={handleSubmit}
-                  className="col-span-1 bg-[#13569c] hover:bg-blue-600 rounded-full font-bold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 active:scale-95 whitespace-nowrap"
+                  className="col-span-1 bg-[#ffffff] hover:bg-[#2273c8] hover:text-[#fff] rounded-full font-bold text-[#13569C] transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 active:scale-95 whitespace-nowrap"
                 >
                   {submitButtonText}
                 </button>
@@ -155,10 +155,10 @@ const Footer: React.FC<FooterProps> = ({
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   className="group block relative flex-1 border border-white overflow-hidden"
-                  initial={{ backgroundColor: "#19395F" }}
+                  initial={{ backgroundColor: "#13569C" }}
                   animate={{
                     backgroundColor:
-                      hoveredIndex === index ? "#ffffff" : "#19395F",
+                      hoveredIndex === index ? "#ffffff" : "#13569C",
                   }}
                   transition={{ duration: 0.7, ease: "easeInOut" }}
                 >

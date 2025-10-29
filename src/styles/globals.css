@@ -162,11 +162,11 @@ textarea {
 
 /* Map Tile Layer Styling */
 .map-tiles {
-  filter: brightness(0.98) contrast(1.05) saturate(1.1);
+  filter: hue-rotate(10deg) saturate(1.1);
   /* Uncomment untuk efek lain:
+  filter: brightness(0.98) contrast(1.05) saturate(1.1);
   filter: grayscale(0.1) brightness(0.95);
   filter: sepia(0.1) saturate(1.2);
-  filter: hue-rotate(10deg) saturate(1.1);
   */
 }
 
